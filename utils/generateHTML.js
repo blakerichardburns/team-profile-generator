@@ -18,7 +18,7 @@ function generateHTML(managerArray, engineerArray, internArray) {
     </body>
 </html>
     `;
-}
+};
 
 function generateTeam(managerArray, engineerArray, internArray) {
 
@@ -26,10 +26,10 @@ function generateTeam(managerArray, engineerArray, internArray) {
   html += generateManager(managerArray[0]);
   for (i = 0; i < engineerArray.length; i++) {
     html += generateEngineer(engineerArray[i]);
-  }
+  };
   for (i = 0; i < internArray.length; i++) {
     html += generateIntern(internArray[i]);
-  }
+  };
 
   function generateManager(manager) {
     return `<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
@@ -43,7 +43,7 @@ function generateTeam(managerArray, engineerArray, internArray) {
     </ul>
   </div>
 </div>`
-  }
+  };
 
   function generateEngineer(engineer) {
     return `<div class="card text-bg-success mb-3" style="max-width: 18rem;">
@@ -57,7 +57,7 @@ function generateTeam(managerArray, engineerArray, internArray) {
     </ul>
   </div>
 </div>`
-  }
+  };
 
   function generateIntern(intern) {
     return `<div class="card text-bg-warning mb-3" style="max-width: 18rem;">
@@ -71,9 +71,9 @@ function generateTeam(managerArray, engineerArray, internArray) {
     </ul>
   </div>
 </div>`
-  }
+  };
 
   return html;
-}
+};
 
 module.exports = generateHTML;

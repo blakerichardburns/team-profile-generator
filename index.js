@@ -14,7 +14,7 @@ const managerQuestions = [
     {
         name: 'managerName',
         type: 'input',
-        message: 'What is the team manager\'s name?',
+        message: 'Who manages the team?',
     },
     {
         name: 'managerId',
@@ -29,7 +29,7 @@ const managerQuestions = [
     {
         name: 'managerPhone',
         type: 'input',
-        message: 'What is the manager\'s office phone number?',
+        message: 'What is the manager\'s office telephone number?',
     }
 ];
 
@@ -37,8 +37,8 @@ const addEmployee = [
     {
         name: 'addEmployee',
         type: 'list',
-        message: 'Which type of team member would you like to add?',
-        choices: ['Engineer', 'Intern', 'All team members have been added'],
+        message: 'Are there any more members of the team needing added?',
+        choices: ['Yes, an Engineer', 'Indeed, an Intern', 'Nope, all team members have been added!'],
     }
 ];
 
