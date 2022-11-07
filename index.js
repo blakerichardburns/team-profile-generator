@@ -1,11 +1,14 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateHTML = require('./utils/generateHTML.js');
 const Employee = require('./utils/employee.js')
 const Manager = require('./utils/manager.js');
 const Engineer = require('./utils/engineer.js');
 const Intern = require('./utils/intern.js');
+const managerArray = [];
+const engineerArray = [];
+const internArray = [];
 
 const managerQuestions = [
     {
@@ -85,16 +88,44 @@ const internQuestions = [
     }
 ];
 
-function writeToFile(fileName, data) {    
-    return fs.writeFileSync(path.join(process.cwd(), '/dist', fileName), data)
-};
-
-function init() {
-    inquirer
-    .prompt(questions)
-        .then(answers => {
-            writeToFile('team.html', generateMarkdown(answers)
-        )});
+function createManager() {
+    inquirer.prompt(managerQuestions)
+            .then(answers => {
+                const manager = new Manager (answers.managerName, answers.managerId, answers.managerEmail, answers.managerPhone)
+                managerArray.push(manager);
+                createTeam();
+            })
 }
 
-init();
+function createEngineer() {
+    inquirer.prompt(engineerQuestions)
+            .then(answers => {
+                const engineer = new Engineer (answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
+                engineerArray.push(engineer);
+                createTeam();
+            })
+}
+
+function createIntern() {
+    inquirer.prompt(internQuestions)
+            .then(answers => {
+                const intern = new Intern (answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+                internArray.push(intern);
+                createTeam();
+            })
+}
+
+function createTeam() {
+    inquirer.prompt(addEmployee)
+            .then(answers => {
+                if (answers.addEmployee === 'Engineer') {
+                    createEngineer();
+                } else if (answers.addEmployee  === 'Intern') {
+                    createIntern();
+                } else {
+                    fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
+                }
+            })
+}
+
+createManager();
