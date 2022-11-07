@@ -25,10 +25,10 @@ function generateTeam(managerArray, engineerArray, internArray) {
   let html = "";
   html += generateManager(managerArray[0]);
   for (i = 0; i < engineerArray.length; i++) {
-    html += generateEngineer(engineerArray[i])
+    html += generateEngineer(engineerArray[i]);
   }
   for (i = 0; i < internArray.length; i++) {
-    html += generateIntern(internArray[i])
+    html += generateIntern(internArray[i]);
   }
 
   function generateManager(manager) {
@@ -72,7 +72,8 @@ function generateTeam(managerArray, engineerArray, internArray) {
   </div>
 </div>`
   }
-  return html
+
+  return html;
 }
 
 module.exports = generateHTML;

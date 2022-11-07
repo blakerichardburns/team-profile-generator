@@ -90,42 +90,42 @@ const internQuestions = [
 
 function createManager() {
     inquirer.prompt(managerQuestions)
-            .then(answers => {
-                const manager = new Manager (answers.managerName, answers.managerId, answers.managerEmail, answers.managerPhone)
-                managerArray.push(manager);
-                createTeam();
-            })
+        .then(answers => {
+            const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerPhone)
+            managerArray.push(manager);
+            createTeam();
+        })
 }
 
 function createEngineer() {
     inquirer.prompt(engineerQuestions)
-            .then(answers => {
-                const engineer = new Engineer (answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
-                engineerArray.push(engineer);
-                createTeam();
-            })
+        .then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
+            engineerArray.push(engineer);
+            createTeam();
+        })
 }
 
 function createIntern() {
     inquirer.prompt(internQuestions)
-            .then(answers => {
-                const intern = new Intern (answers.internName, answers.internId, answers.internEmail, answers.internSchool)
-                internArray.push(intern);
-                createTeam();
-            })
+        .then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
+            internArray.push(intern);
+            createTeam();
+        })
 }
 
 function createTeam() {
     inquirer.prompt(addEmployee)
-            .then(answers => {
-                if (answers.addEmployee === 'Engineer') {
-                    createEngineer();
-                } else if (answers.addEmployee  === 'Intern') {
-                    createIntern();
-                } else {
-                    fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
-                }
-            })
+        .then(answers => {
+            if (answers.addEmployee === 'Engineer') {
+                createEngineer();
+            } else if (answers.addEmployee === 'Intern') {
+                createIntern();
+            } else {
+                fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
+            }
+        })
 }
 
 createManager();
