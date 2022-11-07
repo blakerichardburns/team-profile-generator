@@ -7,19 +7,82 @@ const Manager = require('./utils/manager.js');
 const Engineer = require('./utils/engineer.js');
 const Intern = require('./utils/intern.js');
 
-const questions = [
+const managerQuestions = [
     {
-        name: '',
+        name: 'managerName',
         type: 'input',
-        message: '',
+        message: 'What is the team manager\'s name?',
     },
     {
-        name: '',
-        type: 'list',
-        message: '',
-        choices: [],
+        name: 'managerId',
+        type: 'input',
+        message: 'What is the manager\'s Employee ID #?',
     },
-   
+    {
+        name: 'managerEmail',
+        type: 'input',
+        message: 'What is the manager\'s email address?',
+    },
+    {
+        name: 'managerPhone',
+        type: 'input',
+        message: 'What is the manager\'s office phone number?',
+    }
+];
+
+const addEmployee = [
+    {
+        name: 'addEmployee',
+        type: 'list',
+        message: 'Which type of team member would you like to add?',
+        choices: ['Engineer', 'Intern', 'All team members have been added'],
+    }
+];
+
+const engineerQuestions = [
+    {
+        name: 'engineerName',
+        type: 'input',
+        message: 'What is the engineer\'s name?',
+    },
+    {
+        name: 'engineerId',
+        type: 'input',
+        message: 'What is the engineer\'s Employee ID #?',
+    },
+    {
+        name: 'engineerEmail',
+        type: 'input',
+        message: 'What is the engineer\'s email address?',
+    },
+    {
+        name: 'engineerGithub',
+        type: 'input',
+        message: 'What is the engineer\'s Github username?',
+    }
+];
+
+const internQuestions = [
+    {
+        name: 'internName',
+        type: 'input',
+        message: 'What is the intern\'s name?',
+    },
+    {
+        name: 'internId',
+        type: 'input',
+        message: 'What is the intern\'s Employee ID #?',
+    },
+    {
+        name: 'internEmail',
+        type: 'input',
+        message: 'What is the intern\'s email address?',
+    },
+    {
+        name: 'internSchool',
+        type: 'input',
+        message: 'Which institution of higher learning does/did your intern attend?',
+    }
 ];
 
 function writeToFile(fileName, data) {    

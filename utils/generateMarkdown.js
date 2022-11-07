@@ -17,33 +17,33 @@ function generateMarkdown(data) {
             <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
                 <div class="card-header">Manager</div>
                 <div class="card-body">
-                <h5 class="card-title">`${data.name}`</h5>
+                <h5 class="card-title">${data.name}</h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: `${data.id}`</li>
-                    <li class="list-group-item">Email: `${data.email}`</li>
-                    <li class="list-group-item">Office Number: `${data.officeNumber}`</li>
+                    <li class="list-group-item">Employee ID: ${data.id}</li>
+                    <li class="list-group-item"><a href="mailto:${data.email}">Email: ${data.email}</a></li>
+                    <li class="list-group-item">Office Number: ${data.officeNumber}</li>
                   </ul>
                 </div>
             </div>
             <div class="card text-bg-success mb-3" style="max-width: 18rem;">
                 <div class="card-header">Engineer</div>
                 <div class="card-body">
-                <h5 class="card-title">`${data.name}`</h5>
+                <h5 class="card-title">${data.name}</h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: `${data.id}`</li>
-                    <li class="list-group-item">Email: `${data.email}`</li>
-                    <li class="list-group-item">Github: `${data.github}`</li>
+                    <li class="list-group-item">Employee ID: ${data.id}</li>
+                    <li class="list-group-item"><a href="mailto:${data.email}">Email: ${data.email}</a></li>
+                    <li class="list-group-item"><a href="https://github.com/${data.github}" target="blank">Github: ${data.github}</a></li>
                   </ul>
                 </div>
             </div>
             <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
                 <div class="card-header">Intern</div>
                 <div class="card-body">
-                <h5 class="card-title">`${data.name}`</h5>
+                <h5 class="card-title">${data.name}</h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: `${data.id}`</li>
-                    <li class="list-group-item">Email: `${data.email}`</li>
-                    <li class="list-group-item">School: `${data.school}`</li>
+                    <li class="list-group-item">Employee ID: ${data.id}</li>
+                    <li class="list-group-item"><a href="mailto:${data.email}">Email: ${data.email}</a></li>
+                    <li class="list-group-item">School: ${data.school}</li>
                   </ul>
                 </div>
             </div>
