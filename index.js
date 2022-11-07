@@ -118,9 +118,9 @@ function createIntern() {
 function createTeam() {
     inquirer.prompt(addEmployee)
         .then(answers => {
-            if (answers.addEmployee === 'Engineer') {
+            if (answers.addEmployee === 'Yes, an Engineer') {
                 createEngineer();
-            } else if (answers.addEmployee === 'Intern') {
+            } else if (answers.addEmployee === 'Indeed, an Intern') {
                 createIntern();
             } else {
                 fs.writeFileSync(path.join(__dirname, '/dist/team.html'), generateHTML(managerArray, engineerArray, internArray), "utf-8");
