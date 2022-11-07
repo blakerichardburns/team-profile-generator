@@ -14,7 +14,7 @@ test("Can set object properties using the Constructor", () => {
 
 test("Get Functions return object properties from the Constructor", () => {
     const e = new Employee("Bob", 1, "bob@email.com");
-    expect(e.getName).toBe("Bob");
-    expect(e.getId).toBe(1);
-    expect(e.getEmail).toBe("bob@email.com");
+    expect(e.getName()).toBe("Bob");
+    expect(e.getId()).toBe(1);
+    expect(e.getEmail()).toBe("bob@email.com");
 });
