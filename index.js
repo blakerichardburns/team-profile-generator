@@ -2,6 +2,10 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const Employee = require('./utils/employee.js')
+const Manager = require('./utils/manager.js');
+const Engineer = require('./utils/engineer.js');
+const Intern = require('./utils/intern.js');
 
 const questions = [
     {
