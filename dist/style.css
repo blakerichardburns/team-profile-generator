@@ -1,0 +1,58 @@
+:root {
+    --textwhite: #ffffff;
+    --navblue: #286ae6 ;
+    --backgroundblue: #aae1f7;
+    --managerpurple: #c181ec;
+    --engineergreen: #9bee8a;
+    --internorange: #e6a938;
+  }
+
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--textwhite);
+    background-color: var(--backgroundblue);
+  }
+  
+  .navbar {
+    background-color: var(--navblue);
+    justify-content: center;
+    font-size: 250%;
+    font-weight: bolder;
+    width: 100%;
+  }
+  
+  .card {
+    display: inline-block;
+    width: 30%;
+    margin: 1%
+  }
+
+  .card-header {
+    font-size: 175%;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 225%;
+    font-weight: bold;
+  }
+
+  .list-group {
+    font-size: 125%;
+  }
+
+  #manager-card {
+    background-color: var(--managerpurple);
+
+  }
+
+  #engineer-card {
+    background-color: var(--engineergreen);
+  }
+
+  #intern-card {
+    background-color: var(--internorange);
+  }
+  
+
