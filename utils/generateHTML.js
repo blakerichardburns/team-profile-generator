@@ -19,18 +19,17 @@ function generateHTML(managerArray, engineerArray, internArray) {
     </body>
 </html>
     `;
-};
+}
 
 function generateTeam(managerArray, engineerArray, internArray) {
-
-  let html = "";
+  let html = '';
   html += generateManager(managerArray[0]);
   for (i = 0; i < engineerArray.length; i++) {
     html += generateEngineer(engineerArray[i]);
-  };
+  }
   for (i = 0; i < internArray.length; i++) {
     html += generateIntern(internArray[i]);
-  };
+  }
 
   function generateManager(manager) {
     return `<div class="card" id="manager-card">
@@ -43,8 +42,8 @@ function generateTeam(managerArray, engineerArray, internArray) {
       <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
     </ul>
   </div>
-</div>`
-  };
+</div>`;
+  }
 
   function generateEngineer(engineer) {
     return `<div class="card" id="engineer-card">
@@ -57,8 +56,8 @@ function generateTeam(managerArray, engineerArray, internArray) {
       <li class="list-group-item"><a href="https://github.com/${engineer.getGithub()}" target="blank">Github: ${engineer.getGithub()}</a></li>
     </ul>
   </div>
-</div>`
-  };
+</div>`;
+  }
 
   function generateIntern(intern) {
     return `<div class="card" id="intern-card">
@@ -71,10 +70,10 @@ function generateTeam(managerArray, engineerArray, internArray) {
       <li class="list-group-item">School: ${intern.getSchool()}</li>
     </ul>
   </div>
-</div>`
-  };
+</div>`;
+  }
 
   return html;
-};
+}
 
 module.exports = generateHTML;

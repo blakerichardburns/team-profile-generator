@@ -1,4 +1,10 @@
 {
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.",
+  "main": "index.js",
+  "author": "Blake Burns",
+  "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.2",
     "inquirer": "^8.2.4",
