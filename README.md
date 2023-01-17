@@ -1,7 +1,10 @@
-# Team-Profile-Generator
-## Week 10 Challenge: Object-Oriented Programming
+# team-profile-generator
+Module 10 Challenge: Object-Oriented Programming
 
 [![Demonstration Video](https://img.youtube.com/vi/vzfh6bx9jtk/maxresdefault.jpg)](https://youtu.be/vzfh6bx9jtk)
+
+## Repository Link
+https://github.com/blakerichardburns/team-profile-generator
 
 ## Description
 A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
