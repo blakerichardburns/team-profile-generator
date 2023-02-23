@@ -21,5 +21,5 @@ A Node.js command-line application that takes in information about employees on 
   Used by inputting data in the command-line using Node JS  
   
   ## Questions
-  For any inquiries, spam by inbox here: blakerichardburns@gmail.com
+  For any inquiries, spam my inbox here: blakerichardburns@gmail.com <br>
   To peruse more of my portfolio, check this out: [blakerichardburns](https://github.com/blakerichardburns)
